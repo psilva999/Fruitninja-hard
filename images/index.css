@@ -1,0 +1,200 @@
+* {
+  margin:0;
+  border:0;
+  padding:0;
+  border-spacing:0;
+  box-sizing:border-box;
+}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+  overflow:hidden;
+  background-image: url('./background.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+body{
+	position: relative;
+}
+
+em{
+	display: none;
+}
+
+.som {
+  z-index:1000;
+  position:absolute;
+  bottom:3rem;
+  right:3rem;
+}
+
+#extra, #view{
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100vw;
+	height: 100vh;
+	text-align: left;
+	background: #fff;
+}
+
+#view{
+	display: block;
+	background: transparent url(blank.gif) repeat 0 0;
+	cursor: default;
+	z-index: 20;
+}
+
+#extra{
+	background: #000;
+}
+
+#extra .layer{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.saque-ganhou {
+  position:absolute;
+  width:100vw;
+  bottom:13rem;
+  left:0;
+  z-index:30;
+  display:none;
+}
+
+.saque-ganhou.active {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.saque-ganhou.active button {
+  cursor:pointer;
+  letter-spacing:2px;
+  padding:.25rem 1rem .20rem 1rem;
+  font-size:1.1rem;
+  color:#fbfbfb;
+  font-family:sans-serif;
+  border:2px solid #FEE050;
+  box-shadow:0px 0px 6px 0px #fbfbfb;
+  border-radius:6px;
+  font-weight: bolder;
+  background:#3E9C35;
+}
+
+.parabens {
+  position:fixed;
+  top:0;
+  display:none;
+  left:0;
+  width:100vw;
+  height:100vh;
+}
+
+.parabens.active {
+  background:rgba(0,0,0,.4);
+  display:grid;
+  place-items:center;
+  font-family:sans-serif;
+  z-index:1000;
+}
+
+.parabens.active article {
+  display:grid;
+  letter-spacing:2px;
+  width:500px;
+  border:5px solid #FEE050;
+  height:400px;
+  border-radius:1rem;
+  place-items:center;
+  background:#3E9C35;
+  color:#fbfbfb;
+}
+
+.parabens.active article h1 {
+  font-size:2rem;
+} 
+
+.parabens.active article p {
+  font-size:2rem;
+} 
+
+.parabens.active article a {
+  font-size:1.2rem;
+  background:#fbfbfb;
+  padding:.25rem .5rem;
+  border-radius:5px;
+  color:#1a1b1c;
+  text-decoration:none;
+} 
+
+#desc{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 80px;
+	color: #ccc;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+}
+
+#desc a{
+	color: #318fe1;
+}
+
+#browser{
+	font-size: 14px;
+	line-height: 16px;
+}
+
+#browser .b{
+	color: #fff;
+	font-weight: 700;
+}
+
+@media (max-width:520px) {
+  .parabens.active article {
+    width:95vw;
+    height:400px;
+  }
+
+  .saque-ganhou {
+    bottom:11rem;
+  }
+  
+  .parabens.active article h1 {
+    font-size:2rem;
+  } 
+  
+  .parabens.active article p {
+    font-size:1.2rem;
+  } 
+  
+  .parabens.active article a {
+    font-size:1.2rem;
+    background:#fbfbfb;
+    padding:.25rem .5rem;
+    border-radius:5px;
+    color:#1a1b1c;
+    text-decoration:none;
+  } 
+}
+
+@media (max-height:400px) {
+  .parabens.active article {
+    height:95vh;
+  }
+
+  .saque-ganhou {
+    bottom:5rem;
+  }
+}

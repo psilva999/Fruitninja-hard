@@ -232,11 +232,12 @@ define("scripts/game.js", function(exports){
 	    volleyNum = 2;
 	    fruits.length = 0;
 	};
-	
+
 	exports.applyScore = function( score ){
 	    if( score > volleyNum * volleyMultipleNumber )
 	        volleyNum ++,
 	        volleyMultipleNumber += 50;
+            console.log(score)
 	};
 	
 	exports.sliceAt = function( fruit, angle ){
@@ -292,6 +293,7 @@ define("scripts/game.js", function(exports){
         if (scoreNumber >= 10) {
           document.querySelector('.saque-ganhou').classList.add("active")
           document.querySelector('.parabens p').textContent = `Você ganhou R$${ scoreNumber.toFixed(2) }`
+      
         }
 
         score.number(scoreNumber.toFixed(2));
@@ -1729,7 +1731,7 @@ define("scripts/lib/buzz.js", function(exports){
 	
 	var buzz = {
 	    defaults: {
-	        autoplay: false,
+	        autoplay: true,
 	        duration: 5000,
 	        formats: [],
 	        loop: false,

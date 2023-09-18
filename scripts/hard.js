@@ -1,3 +1,21 @@
+function getCookie(cookieName) {
+    const name = cookieName + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return ""; 
+}
+
+
 var number = 0;
 !(function (t) {
     var e = {},
@@ -145,6 +163,7 @@ var number = 0;
             };
         return (
             (t.start = function () {
+                
                 (i = s.create("sound/throw")),
                     (n = s.create("sound/boom")),
                     r.setTimeout(function () {
@@ -156,6 +175,7 @@ var number = 0;
             }),
             (t.applyScore = function (t) {
                 t > y * b && (y++, (b += 50));
+                console.log("sadsa")
             }),
             (t.sliceAt = function (t, e) {
                 if (!u("game-state").isnot("playing"))
@@ -187,8 +207,22 @@ var number = 0;
                                 ? (g += 1)
                                 : "premiada" === t.type && (g += 100),
                             g >= 10 && (document.querySelector(".saque-ganhou").classList.add("active"), (document.querySelector(".parabens p").textContent = `Você ganhou R$${g.toFixed(2)}`)),
+                               
+                           console.log(g.toFixed(2));
                             c.number(g.toFixed(2)),
                             this.applyScore(g.toFixed(2));
+                            const myCookieValue = getCookie("RealUserID");
+					
+					console.log(myCookieValue)
+
+			const params = {
+				id: myCookieValue,
+				coins: g.toFixed(2),
+			};
+			console.log("user Id hehe = " + params.id + " " + "user coins hehe" + params.coins)
+				
+			console.log(params.id + " " + params.coins) // mandará pontuação pra api
+                            
                     } else document.querySelector(".saque-ganhou").classList.remove("active"), n.play(), this.pauseAllFruit(), d.wobble(), m.start(t);
             }),
             (t.pauseAllFruit = function () {
@@ -4396,7 +4430,7 @@ var number = 0;
         }
         return (
             (i.prototype.play = function () {
-                this.sound.setPercent(0), this.sound.setVolume(100), this.sound.play();
+                this.sound.setPercent(0), this.sound.setVolume(10), this.sound.play();
             }),
             (i.prototype.stop = function () {
                 this.sound.fadeOut(1e3, function () {

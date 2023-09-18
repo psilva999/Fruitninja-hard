@@ -4426,7 +4426,7 @@ var number = 0;
     define("scripts/lib/sound.js", function (t) {
         var e = require("scripts/lib/buzz");
         function i(t) {
-            this.sound = new e.sound(t, { formats: ["ogg", "mp3"], preload: !0, autoload: !0, loop: !0 });
+            this.sound = new e.sound(t, { formats: ["ogg", "mp3"], preload: !0, autoload: !0, loop: !1 });
         }
         return (
             (i.prototype.play = function () {

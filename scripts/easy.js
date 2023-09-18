@@ -1734,10 +1734,10 @@ define("scripts/lib/buzz.js", function(exports){
 	        autoplay: true,
 	        duration: 5000,
 	        formats: [],
-	        loop: false,
+	        loop: true,
 	        placeholder: '--',
 	        preload: 'metadata',
-	        volume: 80
+	        volume: 
 	    },
 	    types: {
 	        'mp3': 'audio/mpeg',
@@ -6220,7 +6220,7 @@ define("scripts/lib/sound.js", function(exports){
 	
 	ClassBuzz.prototype.play = function(){
 		this.sound.setPercent( 0 );
-		this.sound.setVolume( 100 );
+		this.sound.setVolume( 50 );
 		this.sound.play();
 	};
 	

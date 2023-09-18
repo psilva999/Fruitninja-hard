@@ -7,7 +7,7 @@ var config = {
 	formats: [ "ogg", "mp3" ], 
 	preload: true, 
 	autoload: true, 
-	loop: false 
+	loop: true
 };
 
 function ClassBuzz( src ){
@@ -17,7 +17,7 @@ function ClassBuzz( src ){
 ClassBuzz.prototype.play = function( s ){
 	s = this.sound;
 	s.setPercent( 0 );
-	s.setVolume( 100 );
+	s.setVolume( 10 );
 	s.play();
 };
 

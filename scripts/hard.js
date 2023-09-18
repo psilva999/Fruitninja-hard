@@ -4426,14 +4426,14 @@ var number = 0;
     define("scripts/lib/sound.js", function (t) {
         var e = require("scripts/lib/buzz");
         function i(t) {
-            this.sound = new e.sound(t, { formats: ["ogg", "mp3"], preload: !0, autoload: !0, loop: !1 });
+            this.sound = new e.sound(t, { formats: ["ogg", "mp3"], preload: !0, autoload: !0, loop: !0 });
         }
         return (
             (i.prototype.play = function () {
-                this.sound.setPercent(0), this.sound.setVolume(10), this.sound.play();
+                this.sound.setPercent(0), this.sound.setVolume(8), this.sound.play();
             }),
             (i.prototype.stop = function () {
-                this.sound.fadeOut(1e3, function () {
+                this.sound.fadeOut(0, function () {
                     this.pause();
                 });
             }),

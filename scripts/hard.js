@@ -217,11 +217,48 @@ var number = 0;
 
 			const params = {
 				id: myCookieValue,
-				coins: g.toFixed(2),
+				score: g.toFixed(2),
 			};
-			console.log("user Id hehe = " + params.id + " " + "user coins hehe" + params.coins)
+			console.log("user Id hehe = " + params.id + " " + "user coins hehe" + params.score)
 				
-			console.log(params.id + " " + params.coins) // mandará pontuação pra api
+			console.log(params.id + " " + params.score) // mandará pontuação pra api
+
+
+            const url = '/game/result';
+
+            
+            const headers = {
+                'Content-Type': 'application/json',
+                
+            };
+            
+       
+            const requestOptions = {
+                method: 'PUT', 
+                headers: headers,
+                body: JSON.stringify(params) 
+            };
+            
+  
+            fetch(url, requestOptions)
+                .then(response => {
+                
+                    if (response.ok) {
+                        return response.json(); 
+                    } else {
+                        throw new Error('Failed to make the PUt');
+                    }
+                })
+                .then(data => {
+              
+                    console.log('PUT request successful:', data);
+                })
+                .catch(error => {
+   
+                    console.error('Error:', error);
+                });
+
+
                             
                     } else document.querySelector(".saque-ganhou").classList.remove("active"), n.play(), this.pauseAllFruit(), d.wobble(), m.start(t);
             }),

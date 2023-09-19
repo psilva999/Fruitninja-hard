@@ -677,7 +677,7 @@ var number = 0;
             f = a.quadratic.co,
             d = n.randomNumber,
             m = Math.min,
-            g = 700,
+            g = 700,//tempo hard: 700 | easy: 1200
             v = {
                 boom: ["images/fruit/boom.png", 66, 68, 26, 0, 0, null],
                 apple: ["images/fruit/apple.png", 76, 76, 31, -54, 0, "#c8e925"],
@@ -919,8 +919,8 @@ var number = 0;
                     (i = e),
                     (e = t),
                     (t = (function () {
-                        let t = d(13),
-                            e = y[d(13)],
+                        let t = d(16),
+                            e = y[d(16)],
                             i = [
                                 "apple",
                                 "sandia",

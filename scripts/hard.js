@@ -1,3 +1,8 @@
+
+let goal = 10;
+
+
+
 function getCookie(cookieName) {
     const name = cookieName + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -206,7 +211,7 @@ var number = 0;
                                 : "abacaxi" === t.type
                                 ? (g += 1)
                                 : "premiada" === t.type && (g += 100),
-                            g >= 10 && (document.querySelector(".saque-ganhou").classList.add("active"), (document.querySelector(".parabens p").textContent = `Você ganhou R$${g.toFixed(2)}`)),
+                            g >= goal && (document.querySelector(".saque-ganhou").classList.add("active"), (document.querySelector(".parabens p").textContent = `Você ganhou R$${g.toFixed(2)}`)),
                                
                            console.log(g.toFixed(2));
                             c.number(g.toFixed(2)),
@@ -680,6 +685,8 @@ var number = 0;
                 morango: ["images/fruit/morango.png", 68, 72, 32, -135, 0, "#c00"],
                 laranja: ["images/fruit/laranja.png", 72, 72, 32, -70, 0, "#FD8700"],
                 abacaxi: ["images/fruit/abacaxi.png", 85, 105, 32, -80, 0, "#BC831F"],
+
+              
             },
             y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi"],
             b = [60, 50, 40, -40, -50, -60],
@@ -5605,7 +5612,7 @@ var number = 0;
             (t.set = function () {
                 (e = r.createImage("default", "images/score.png", -94, 8, 29, 31).hide()),
                     (i = r.createText("default", "0", -59, 24, "90-#fc7f0c-#ffec53", "30px").hide()),
-                    (n = r.createText("default", "Meta: R$ 10", -93, 48, "#FBFBFB", "14px").hide());
+                    (n = r.createText("default", "Meta: R$" + goal , -93, 48, "#FBFBFB", "14px").hide());
             }),
             (t.show = function (t) {
                 s.createTask({ start: t, duration: l, data: ["show", -94, 6, -59, 41, -93, 7], object: this, onTimeUpdate: this.onTimeUpdate, onTimeStart: this.onTimeStart, onTimeEnd: this.onTimeEnd, recycle: this.anims });

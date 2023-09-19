@@ -700,20 +700,7 @@ var number = 0;
             y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi", "premiada", "premiada50", "premiada500", "premiada1000"],
             b = [60, 50, 40, -40, -50, -60],
             x = [],
-            w = [
-                "images/fruit/boom.png",
-                "images/fruit/apple.png",
-                "images/fruit/sandia.png",
-                "images/fruit/kiwi.png",
-                "images/fruit/cereja.png",
-                "images/fruit/banana.png",
-                "images/fruit/manga.png",
-                "images/fruit/limao.png",
-                "images/fruit/pessego.png",
-                "images/fruit/morango.png",
-                "images/fruit/laranja.png",
-                "images/fruit/abacaxi.png",
-            ];//premiada-hard
+           
             w = [
               "images/fruit/boom.png",
               "images/fruit/apple.png",
@@ -1586,6 +1573,7 @@ var number = 0;
                                 "sandia",
                                 "apple",
                                 "apple",
+                                "premiada50", 
                                 "sandia",
                                 "apple",
                                 "apple",
@@ -1594,20 +1582,23 @@ var number = 0;
                                 "apple",
                                 "sandia",
                                 "apple",
+                                "premiada",
                                 "apple",
                                 "sandia",
                                 "apple",
                                 "apple",
+                                "premiada500", 
                                 "sandia",
                                 "apple",
                                 "apple",
                                 "sandia",
+                                "premiada1000",
                                 "apple",
                                 "apple",
                                 "cereja",
                             ][d(30)];
                         if (t <= 4) return "boom";
-                        if (t <= 12) return "abacaxi" === e ? i : "laranja" === e ? n : "morango" === e ? r : "pessego" === e ? a : "limao" === e ? s : "banana" === e ? o : "manga" === e ? c : "cereja" === e ? l : e;
+                        if (t <= 16) return "abacaxi" === e ? i : "laranja" === e ? n : "morango" === e ? r : "pessego" === e ? a : "limao" === e ? s : "banana" === e ? o : "manga" === e ? c : "cereja" === e ? l : e;
                     })()));
                 var a = new T({ type: t, originX: e, originY: i, flameStart: r }).set(n);
                 return x.unshift(a), a;

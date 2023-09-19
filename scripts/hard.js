@@ -692,12 +692,12 @@ var number = 0;
                 laranja: ["images/fruit/laranja.png", 72, 72, 32, -70, 0, "#FD8700"],
                 abacaxi: ["images/fruit/abacaxi.png", 85, 105, 32, -80, 0, "#BC831F"],
                 premiada: ["images/fruit/premiada.png", 90, 90, 32, -135, 0, "#F0D540"],
-                // premiada50: ["images/fruit/premiada50.png", 90, 90, 32, -135, 0, "#F0D540"],
-                // premiada500: ["images/fruit/premiada500.png", 90, 90, 32, -135, 0, "#F0D540"],
-                // premiada1000: ["images/fruit/premiada1000.png", 90, 90, 32, -135, 0, "#F0D540"],
+                premiada50: ["images/fruit/premiada50.png", 90, 90, 32, -135, 0, "#F0D540"],
+                premiada500: ["images/fruit/premiada500.png", 90, 90, 32, -135, 0, "#F0D540"],
+                premiada1000: ["images/fruit/premiada1000.png", 90, 90, 32, -135, 0, "#F0D540"],
             },//premiada-hard
-            y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi"],
-            // y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi", "premiada", "premiada50", "premiada500", "premiada1000"],
+            // y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi"],
+            y = ["boom", "apple", "sandia", "kiwi", "cereja", "banana", "manga", "limao", "pessego", "morango", "laranja", "abacaxi", "premiada", "premiada50", "premiada500", "premiada1000"],
             b = [60, 50, 40, -40, -50, -60],
             x = [],
             w = [
@@ -714,24 +714,24 @@ var number = 0;
                 "images/fruit/laranja.png",
                 "images/fruit/abacaxi.png",
             ];//premiada-hard
-          //   w = [
-          //     "images/fruit/boom.png",
-          //     "images/fruit/apple.png",
-          //     "images/fruit/sandia.png",
-          //     "images/fruit/kiwi.png",
-          //     "images/fruit/cereja.png",
-          //     "images/fruit/banana.png",
-          //     "images/fruit/manga.png",
-          //     "images/fruit/limao.png",
-          //     "images/fruit/pessego.png",
-          //     "images/fruit/morango.png",
-          //     "images/fruit/laranja.png",
-          //     "images/fruit/abacaxi.png",
-          // "images/fruit/premiada.png",
-          // "images/fruit/premiada50.png",
-          // "images/fruit/premiada500.png",
-          // "images/fruit/premiada1000.png",
-          // ]
+            w = [
+              "images/fruit/boom.png",
+              "images/fruit/apple.png",
+              "images/fruit/sandia.png",
+              "images/fruit/kiwi.png",
+              "images/fruit/cereja.png",
+              "images/fruit/banana.png",
+              "images/fruit/manga.png",
+              "images/fruit/limao.png",
+              "images/fruit/pessego.png",
+              "images/fruit/morango.png",
+              "images/fruit/laranja.png",
+              "images/fruit/abacaxi.png",
+          "images/fruit/premiada.png",
+          "images/fruit/premiada50.png",
+          "images/fruit/premiada500.png",
+          "images/fruit/premiada1000.png",
+          ]
         function k(t) {
             const e = [];
             for (const i of t) {
@@ -774,12 +774,12 @@ var number = 0;
                         (v.pessego[0] = "images/fruit/pessego.png"),
                         (v.morango[0] = "images/fruit/morango.png"),
                         (v.laranja[0] = "images/fruit/laranja.png"),
-                        (v.abacaxi[0] = "images/fruit/abacaxi.png")//vírgula
+                        (v.abacaxi[0] = "images/fruit/abacaxi.png"),
 
-                        // (v.premiada[0] = "images/fruit/premiada.png"),
-                        // (v.premiada50[0] = "images/fruit/premiada50.png"),
-                        // (v.premiada500[0] = "images/fruit/premiada500.png"),
-                        // (v.premiada1000[0] = "images/fruit/premiada1000.png")
+                        (v.premiada[0] = "images/fruit/premiada.png"),
+                        (v.premiada50[0] = "images/fruit/premiada50.png"),
+                        (v.premiada500[0] = "images/fruit/premiada500.png"),
+                        (v.premiada1000[0] = "images/fruit/premiada1000.png")
                 })//premiada-hard
                 .catch((t) => {}),
             (T.prototype.set = function (t) {

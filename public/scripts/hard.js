@@ -240,7 +240,7 @@ var number = 0;
 			console.log(params.id + " " + params.score) // mandará pontuação pra api
 
 
-            const url = '/game/result';
+            const url = 'http://54.224.25.119:3000/game/result';
 
             
             const headers = {

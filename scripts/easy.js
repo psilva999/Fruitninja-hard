@@ -189,27 +189,27 @@ var number = 0;
       const i = x.indexOf(t);
       -1 !== i && x.splice(i, 1),
        "apple" === t.type
-        ? (g += 0.05)
+        ? (g += 0.05 + valueToBet/2)
         : "sandia" === t.type
-        ? (g += 0.1)
+        ? (g += 0.1 + valueToBet/2)
         : "kiwi" === t.type
-        ? (g += 0.2)
+        ? (g += 0.2 + valueToBet/2)
         : "cereja" === t.type
-        ? (g += 0.25)
+        ? (g += 0.25 + valueToBet/2)
         : "manga" === t.type
-        ? (g += 0.3)
+        ? (g += 0.3 + valueToBet/2)
         : "banana" === t.type
-        ? (g += 0.35)
+        ? (g += 0.35 + valueToBet/2)
         : "limao" === t.type
-        ? (g += 0.4)
+        ? (g += 0.4 + valueToBet/2)
         : "pessego" === t.type
-        ? (g += 0.45)
+        ? (g += 0.45 + valueToBet/2)
         : "morango" === t.type
-        ? (g += 0.5)
+        ? (g += 0.5 + valueToBet/2)
         : "laranja" === t.type
-        ? (g += 0.75)
+        ? (g += 0.75 + valueToBet/2)
         : "abacaxi" === t.type
-        ? (g += 1)
+        ? (g += 1 + valueToBet/2)
         : "premiada50" === t.type
         ? (g += 50)
         : "premiada500" === t.type
@@ -4837,7 +4837,7 @@ var number = 0;
    (t.set = function () {
     (e = n.createImage("default", "images/score.png", -94, 8, 29, 31).hide()),
      (i = n.createText("default", "0", -59, 24, "90-#fc7f0c-#ffec53", "30px").hide()),
-     (r = n.createText("default", "Meta: R$ 10", -93, 48, "#FBFBFB", "14px").hide());
+     (r = n.createText("default", "Meta: R$" + goal, -93, 48, "#FBFBFB", "14px").hide());
    }),
    (t.show = function (t) {
     o.createTask({ start: t, duration: u, data: ["show", -94, 6, -59, 41, -93, 7], object: this, onTimeUpdate: this.onTimeUpdate, onTimeStart: this.onTimeStart, onTimeEnd: this.onTimeEnd, recycle: this.anims });

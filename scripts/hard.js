@@ -1,13 +1,8 @@
-
-let goal = 10;
-
-
-
 function getCookie(cookieName) {
     const name = cookieName + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
     const cookieArray = decodedCookie.split(';');
-
+  
     for (let i = 0; i < cookieArray.length; i++) {
         let cookie = cookieArray[i];
         while (cookie.charAt(0) === ' ') {
@@ -18,7 +13,17 @@ function getCookie(cookieName) {
         }
     }
     return ""; 
-}
+  }
+  
+  
+  const valueToBet = getCookie("ValueToPlay");
+  console.log(valueToBet);
+  
+  let goal = valueToBet/2;
+
+
+
+
 
 
 var number = 0;

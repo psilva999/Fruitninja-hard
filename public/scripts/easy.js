@@ -1,8 +1,6 @@
 
 let goal = 10;
 
-
-
 function getCookie(cookieName) {
     const name = cookieName + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -19,13 +17,6 @@ function getCookie(cookieName) {
     }
     return ""; 
 }
-
-
-
-
-
-
-
 
 var number = 0;
 !(function (t) {

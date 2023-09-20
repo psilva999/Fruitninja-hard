@@ -289,7 +289,15 @@ var number = 0;
                 u("game-state").isnot("playing") || ("boom" != t.type && p.showLoseAt(t.originX));
             }),
             l.addEventListener("game.over", function () {
-                document.querySelector(".saque-ganhou").classList.remove("active"), t.gameOver(), f.switchOn(), (number = 0);
+              // window.location.href = "http://fruitmoney.com.br"; //redireciona 
+              // document.querySelector(".parabens").classList.add("active") 
+              // document.querySelector(".parabens article h1").textContent = 'VOCÊ PERDEU!'
+              // document.querySelector(".parabens article p").textContent = '....'
+
+              document.querySelector(".saque-ganhou").classList.remove("active") 
+              t.gameOver() 
+              f.switchOn() 
+              number = 0
             }),
             l.addEventListener("overWhiteLight.show", function () {
                 f.endAll();
@@ -682,7 +690,7 @@ var number = 0;
             f = a.quadratic.co,
             d = n.randomNumber,
             m = Math.min,
-            g = 700,//tempo hard: 700 | easy: 1200
+            g = 800,//tempo hard: 700 | easy: 1200
             v = {
                 boom: ["images/fruit/boom.png", 66, 68, 26, 0, 0, null],
                 apple: ["images/fruit/apple.png", 76, 76, 31, -54, 0, "#c8e925"],
@@ -5466,7 +5474,15 @@ var number = 0;
                             t.attr("opacity", 1 - e / 4e3);
                         },
                         onTimeEnd: function () {
-                            document.querySelector(".saque-ganhou").classList.remove("active"), t.remove(), a.postMessage("game.over"), (number = 0);
+                          //  window.location.href = "http://fruitmoney.com.br";//redireciona
+                          // document.querySelector(".parabens").classList.add("active") 
+                          // document.querySelector(".parabens article h1").textContent = 'VOCÊ PERDEU!'
+                          // document.querySelector(".parabens article p").textContent = '....'
+
+                            document.querySelector(".saque-ganhou").classList.remove("active") 
+                            t.remove() 
+                            a.postMessage("game.over")
+                            number = 0
                         },
                     };
                 r.createTask({ start: 0, duration: 4e3, object: e, onTimeUpdate: e.onTimeUpdate, onTimeEnd: e.onTimeEnd });
@@ -5540,7 +5556,12 @@ var number = 0;
                 if (number >= 0 && number <= 3) {
                     const t = c[(++number - 1) % c.length],
                         e = t[1].src.replace("x.png", "xf.png");
-                    t[0].attr("src", e), this.scaleImage(t[0]), 3 === number && (document.querySelector(".saque-ganhou").classList.remove("active"), (number = 0), o.postMessage("game.over"));
+
+                    //comenta essa pra funfar 
+                    t[0].attr("src", e), this.scaleImage(t[0]), 3 === number && (document.querySelector(".saque-ganhou").classList.remove("active"), number = 0, o.postMessage("game.over"));
+
+                    //redireciona:
+                    //  t[0].attr("src", e), this.scaleImage(t[0]), 3 === number && (document.querySelector(".saque-ganhou").classList.remove("active"), window.location.href = "http://fruitmoney.com.br", document.querySelector(".parabens").classList.add("active"), document.querySelector(".parabens article h1").textContent = 'VOCÊ PERDEU!', document.querySelector(".parabens article p").textContent = '....', number = 0, a.postMessage("game.over"));
                 }
             }),
             (t.scaleImage = function (t) {

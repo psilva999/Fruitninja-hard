@@ -289,10 +289,10 @@ var number = 0;
                 u("game-state").isnot("playing") || ("boom" != t.type && p.showLoseAt(t.originX));
             }),
             l.addEventListener("game.over", function () {
-              // window.location.href = "http://fruitmoney.com.br"; //redireciona 
-              // document.querySelector(".parabens").classList.add("active") 
-              // document.querySelector(".parabens article h1").textContent = 'VOCÊ PERDEU!'
-              // document.querySelector(".parabens article p").textContent = '....'
+              window.location.href = "http://fruitmoney.com.br"; //redireciona 
+              document.querySelector(".parabens").classList.add("active") 
+              document.querySelector(".parabens article h1").textContent = 'VOCÊ PERDEU!'
+              document.querySelector(".parabens article p").textContent = '....'
 
               document.querySelector(".saque-ganhou").classList.remove("active") 
               t.gameOver() 

@@ -19,7 +19,7 @@ function getCookie(cookieName) {
   const valueToBet = getCookie("ValueToPlay");
   console.log(valueToBet);
   
-  let goal = valueToBet/2;
+  let goal = valueToBet * 2;
 
 
 
